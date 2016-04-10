@@ -1,4 +1,12 @@
-// Motor controller pins
+//------------
+//-----------------------
+//---------------------------------
+// Initializations and Definitions
+//---------------------------------
+//-----------------------
+//------------
+
+// Motor pins
 const int AIN1 = 3;
 const int AIN2 = 9;
 const int BIN1 = 10;
@@ -7,13 +15,24 @@ const int BIN2 = 11;
 //Speed variable
 int speed;
 
+
+//------------
+//-----------------------
+//------------------------------
+// General Functions
+//------------------------------
+//-----------------------
+//------------
+
+//Intialize Motors - Set pins as OUTPUT
 void InitMotors() {
-  pinMode(AIN1, OUTPUT); // set pins to output
+  pinMode(AIN1, OUTPUT);
   pinMode(AIN2, OUTPUT);
   pinMode(BIN1, OUTPUT);
   pinMode(BIN2, OUTPUT);  
 }
 
+//Drive forward and backward depeding on the speed variable from Pid function
 void Motors(){
   if (speed > 0)
   { 
@@ -34,6 +53,7 @@ void Motors(){
   }
 }
 
+//Stop the motors
 void stop()
 {
   analogWrite(AIN1, 0);
