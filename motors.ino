@@ -7,8 +7,8 @@
 //------------
 
 // Motor pins
-const int AIN1 = 3;
-const int AIN2 = 9;
+const int AIN1 = 5;
+const int AIN2 = 6;
 const int BIN1 = 10;
 const int BIN2 = 11;
 
