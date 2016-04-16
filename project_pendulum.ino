@@ -9,5 +9,6 @@ void setup() {
 void loop() {
   updateValues();
   verify_and_drive();
+  printAngles();
   delay(2);
 }

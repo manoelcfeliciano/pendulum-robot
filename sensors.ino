@@ -220,13 +220,13 @@ void printAngles()
   Serial.print("\t");
 #endif
 
-  Serial.print(kalAngleX); Serial.print("\t");
+  //Serial.print(kalAngleX); Serial.print("\t");
 
-  Serial.print("\t");
+  //Serial.print("\t");
 
-  Serial.print(kalAngleY); Serial.print("\t");
+  //Serial.print(kalAngleY); Serial.print("\t");
 
-  Serial.print("\r\n");
+  //Serial.print("\r\n");
 
   Serial.print(averageAngle); Serial.print("\r\n");
 }
