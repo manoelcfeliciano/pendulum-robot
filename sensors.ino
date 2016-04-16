@@ -26,8 +26,8 @@ uint32_t timer;
 
 //Angles and Offset
 const float upRight = 0.0;
-const float upRightOffset = 2;
-const float balanceAngle = 30;
+const float upRightOffset = 0;
+const float balanceAngle = 0.0;
 float averageAngle = 0;
 float CurrentAngle;
 
@@ -195,8 +195,14 @@ void verify_and_drive() {
     if(abs(error) < balanceAngle){
       Pid();
       Motors();
+      Serial.print("Motors running\n");
+      Serial.print("Balance angle:"); Serial.print(balanceAngle); Serial.print("\n");
+      Serial.print("Error:"); Serial.print(abs(error)); Serial.print("\n");
       
     } else {
+      Serial.print("Motors stopped\n");
+      Serial.print("Balance angle:"); Serial.print(balanceAngle); Serial.print("\n");
+      Serial.print("Error:"); Serial.print(abs(error)); Serial.print("\n");
       stop();
       
     }
